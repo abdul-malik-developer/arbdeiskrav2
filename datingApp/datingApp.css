@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+ 
+.container {
+    width: 90%;
+}
+.center-container{
+    text-align: center;
+}
+ 
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+ 
+.filter-buttons {
+    margin-bottom: 2rem;
+}
+ 
+.filter-buttons button {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#filter-women{
+    background-color: #ff00d9;
+}
+#filter-men{
+    background-color: #0003ff;
+}
+#filter-all{
+    background: rgb(0,3,255);
+    background: linear-gradient(315deg, rgba(0,3,255,1) 42%, rgba(255,0,217,1) 59%);
+}
+ 
+/* card */
+ 
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+ 
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+ 
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ 
+.card .city{
+    font-style: italic;
+}
