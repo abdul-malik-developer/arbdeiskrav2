@@ -66,6 +66,11 @@ const displayProfile = async (gender) => {
   score--;
   Showscore.textContent = score;
 }
+// legger inn på localstorage
+ 
+const saveLikedProfilesToLocalStorage = () => {
+  localStorage.setItem('likedProfiles', JSON.stringify(likedProfilArray));
+};
 
 
 //Filter knapper
