@@ -24,6 +24,50 @@ const fetchRandomUserProfile = async (gender) => {
   }
 };
 
+const displayProfile = async (gender) => {
+ 
+  while (score === 0) {
+      let answer = prompt('Har du lyst til å swipe mer? Ja/Nei').toLowerCase();
+      if (answer === 'ja') {
+          score = 10;
+          Showscore.textContent = score;
+      } else {
+          continue;
+      }
+  }
+
+  if (gender && score > 0) {
+      currentGender = gender;
+  }
+
+  profile = await fetchRandomUserProfile(currentGender);
+
+  const div = document.createElement('div');
+  if(profile.gender == 'male'){
+      div.style.backgroundColor = '#0003ff'
+  } else if (profile.gender == 'female'){
+      div.style.backgroundColor = '#ff00d9'
+  }
+  div.classList = 'card';
+  const h4 = document.createElement('h4');
+  const p = document.createElement('p');
+  const img = document.createElement('img');
+  img.setAttribute('src', profile.picture.large);
+
+  h4.textContent = `${profile.name.first} ${profile.name.last}`;
+  p.textContent = profile.location.city;
+
+  div.appendChild(h4);
+  div.appendChild(p);
+  div.appendChild(img);
+
+  cardContainer.appendChild(div);
+
+  score--;
+  Showscore.textContent = score;
+}
+
+
 //Filter knapper
 womenButton.addEventListener("click", () => {
   cardContainer.innerHTML = "";
