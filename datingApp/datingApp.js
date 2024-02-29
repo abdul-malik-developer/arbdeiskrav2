@@ -1,4 +1,4 @@
-import axios from "axios";
+
 let url = "https://randomuser.me/api/";
 const showScore = document.getElementById("score");
 const womenButton = document.getElementById("filter-women");
