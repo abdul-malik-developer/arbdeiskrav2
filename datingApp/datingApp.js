@@ -1,43 +1,17 @@
-
-
-const Showscore = document.getElementById('score');
-const womenButton = document.getElementById('filter-women');
-const menButton = document.getElementById('filter-men');
-const allButton = document.getElementById('filter-all');
-const cardContainer = document.querySelector('.card-container');
-const likedProfiles = document.querySelector('.likedProfils-container');
- 
-
- 
- 
+const Showscore = document.getElementById("score");
+const womenButton = document.getElementById("filter-women");
+const menButton = document.getElementById("filter-men");
+const allButton = document.getElementById("filter-all");
+const cardContainer = document.querySelector(".card-container");
+const likedProfiles = document.querySelector(".likedProfils-container");
 
 //Variabel for score og funksjon for å oppdatere det.
 let score = 10;
 
-document.getElementById("yes").addEventListener("click", function () {
-  updateScore;
-  ("yes");
-});
-
-document.getElementById("yes").addEventListener("click", function () {
-  updateScore;
-  ("no");
-});
-
-function updateScore(Swiped) {
-  if (swiped === "yes" || swiped === "no") {
-    userScore--;
-    showScore.innerHTML = "User score: " + userScore;
-  } else {
-    console.log("Invalid");
-  }
-}
-
-// Api fetch
-
 let likedProfilArray = [];
 
 const fetchRandomUserProfile = async (gender) => {
+  let url = "https://randomuser.me/api/";
   if (gender) {
     url += `?gender=${gender}`;
   }
@@ -64,4 +38,15 @@ allButton.addEventListener("click", () => {
   displayProfile("");
 });
 
-function displayProfile(gender) {}
+
+//ArrowLeft & ArrowRight
+document.addEventListener('keydown', async function(event) {
+    if (event.key === 'ArrowLeft' && currentGender) {
+        cardContainer.innerHTML = '';
+        await displayProfile();
+    } else if (event.key === 'ArrowRight' && currentGender){
+        addToLikedProfiles();
+        cardContainer.innerHTML = '';
+        displayProfile();
+    }
+});
