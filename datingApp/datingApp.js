@@ -1,11 +1,15 @@
 
-let url = "https://randomuser.me/api/";
-const showScore = document.getElementById("score");
-const womenButton = document.getElementById("filter-women");
-const menButton = document.getElementById("filter-men");
-const allButton = document.getElementById("filter-all");
-const cardContainer = document.querySelector(".card-container");
-const likedProfiles = document.querySelector(".likedProfils-container");
+
+const Showscore = document.getElementById('score');
+const womenButton = document.getElementById('filter-women');
+const menButton = document.getElementById('filter-men');
+const allButton = document.getElementById('filter-all');
+const cardContainer = document.querySelector('.card-container');
+const likedProfiles = document.querySelector('.likedProfils-container');
+ 
+
+ 
+ 
 
 //Variabel for score og funksjon for å oppdatere det.
 let score = 10;
