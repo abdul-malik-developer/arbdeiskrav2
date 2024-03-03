@@ -72,3 +72,32 @@ body {
 .card .city{
     font-style: italic;
 }
+/* likedprofil container */
+.likedProfils-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    align-items: end;
+}
+ 
+.liked-profile{
+    margin:1rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin: 0.5em;
+    width: 200px;
+}
+.liked-profile button{
+    margin-top: 0.5em;
+    margin-left: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
