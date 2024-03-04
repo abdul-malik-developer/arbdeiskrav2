@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+ 
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .filtrering {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+ 
+  .filtrering label,
+  .filtrering select,
+  .filtrering button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+ 
+  .filtrering label {
+    font-weight: bold;
+  }
+ 
+  .filtrering select {
+    flex: 1;
+    margin-right: 10px;
+  }
+ 
+  .filtrering button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  .filtrering button:hover {
+    background-color: #45a049;
+  }
+ 
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+ 
+ 
+  .btn-container{
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .singel-btn{
+    position: relative;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    background-color: #4caf50;
+    color: #fff;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  .singel-btn:hover{
+    background-color: #45a049;
+  }
+  .chat-container{
+    display: flex;
+    justify-content: end;
+  }
+  .chatt-box{
+    cursor: pointer;
+    width: 50px;
+  }
