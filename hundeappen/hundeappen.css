@@ -94,3 +94,55 @@ body {
     cursor: pointer;
     width: 50px;
   }
+  
+  /* card */
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+}
+
+  .card{
+    width: 180px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  img{
+    width: 100%;
+  }
+
+.owner-img  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid darkcyan;
+}
+.dog-img img{
+    margin-block: .7rem;
+    width: 100%;
+    border-radius: 4%;
+    border: 1px solid darkcyan;
+}
+p {
+  margin-bottom: .7rem;
+  font-weight: bold;
+  color:darkcyan;
+}
+  
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056
+  }
