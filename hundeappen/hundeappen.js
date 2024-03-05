@@ -41,12 +41,12 @@ async function displayProfileCards(profiles) {
 
             // Add user name
             const name = document.createElement('p');
-            name.textContent = ${profile.name.first} ${profile.name.last};
+            name.textContent = profile.name.first} ${profile.name.last};
             card.appendChild(name);
 
             // Add location
             const location = document.createElement('p');
-            location.textContent = ${profile.location.city}, ${profile.location.country};
+            location.textContent =`${profile.location.city}, ${profile.location.country}`;
             card.appendChild(location);
 
             // Add delete button
