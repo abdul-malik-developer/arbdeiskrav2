@@ -116,3 +116,11 @@ newCards.addEventListener("click", () => {
     }, 2000 * i);
   }
 });
+filterBtn.addEventListener('click', () =>{
+    let breeds = breedDropdown.value;
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() =>{
+            displayProfile(`https://dog.ceo/api/breed/${breeds}/images/random`);
+        }, 2000 * i);
+    }
+});
