@@ -7,30 +7,29 @@
     <title>hundeappen</title>
 </head>
 <body>
-    <div class="container">
+ <div class="container">
         <div class="filtrering">
           <label for="hundeFiltering">Hunderase:</label>
           <select name="filtrering" id="hundeFiltering">
             <option value="">Velg hunderase...</option>
-            <option value="hunderase1">Hunderase 1</option>
-            <option value="hunderase2">Hunderase 2</option>
-            <option value="hunderase3">Hunderase 3</option>
-            <option value="hunderase4">Hunderase 4</option>
-            <option value="hunderase5">Hunderase 5</option>
+            <option value="ridgeback-rhodesian">ridgeback-rhodesian</option>
+            <option value="terrier-patterdale">terrier-patterdale</option>
+            <option value="akita">akita</option>
+            <option value="hound-basset">hound-basset</option>
+            <option value="newfoundland">newfoundland</option>
           </select>
-          <button type="submit">Filter</button>
+          <button type="submit" id="filterBtn">Filter</button>
         </div>
         <div class="btn-container">
             <button type="button" class="singel-btn">vis 10 nye kort</button>
         </div>
         <div class="cards-container" id="cardsContainer">
-          <div class="card">
-          </div>
         </div>
         <div class="chat-container">
-                <img class="chatt-box" src="assets/chat (1).png" alt="">
+                <img id="chatBtnImg" class="chatt-box" src="assets/chat (1).png" alt="">
         </div>
       </div>
+      
       
     <script src="hundeappen.js"></script>
 </body>
