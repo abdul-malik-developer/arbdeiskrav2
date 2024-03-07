@@ -124,3 +124,75 @@ filterBtn.addEventListener('click', () =>{
         }, 2000 * i);
     }
 });
+
+
+chattBoxImg.addEventListener('click', () =>{
+    chatBox('type...')
+})
+
+function chatBox(ownerMessage) {
+    chattBoxImg.style.display = 'none';
+    const chatContainer = document.createElement('div');
+    chatContainer.classList.add('chat-box');
+
+    const chatHeader = document.createElement('div');
+    chatHeader.classList.add('chat-header');
+    chatHeader.textContent = 'Chat Box';
+
+    const chatBody = document.createElement('div');
+    chatBody.classList.add('chat-body');
+    chatBody.setAttribute('id', 'chatBody');
+    if (ownerMessage) {
+        const messageFromOwner = document.createElement('p');
+        messageFromOwner.textContent = ownerMessage;
+        chatBody.appendChild(messageFromOwner);
+    }
+    const messageInput = document.createElement('input');
+    messageInput.setAttribute('type', 'text');
+    messageInput.classList.add('chat-input');
+    messageInput.setAttribute('id', 'messageInput');
+    messageInput.placeholder = 'Type your message...';
+
+    const sendButton = document.createElement('button');
+    sendButton.classList.add('send-button');
+    sendButton.setAttribute('id', 'sendButton');
+    sendButton.textContent = 'Send';
+
+    const closeButton = document.createElement('button');
+    closeButton.classList.add('close-button');
+    closeButton.setAttribute('id', 'closeButton');
+    closeButton.textContent = '×';
+
+    chatContainer.appendChild(chatHeader);
+    chatContainer.appendChild(chatBody);
+    chatContainer.appendChild(messageInput);
+    chatContainer.appendChild(sendButton);
+    chatContainer.appendChild(closeButton);
+
+    chatParentContainer.appendChild(chatContainer);
+
+    closeButton.addEventListener('click', () => {
+        chatContainer.remove();
+        chattBoxImg.style.display = 'block';
+    });
+
+    sendButton.addEventListener('click', () => {
+        const text = document.createElement('p');
+        const deleteChat = document.createElement('button');
+        deleteChat.textContent = 'x';
+        deleteChat.style.color = 'red';
+        deleteChat.style.padding = '2px 5px';
+        deleteChat.style.border = 'none';
+        deleteChat.style.background = 'none';
+        deleteChat.style.cursor = 'pointer';
+        deleteChat.addEventListener('click', () => {
+            text.remove();
+        });
+        text.textContent = messageInput.value;
+        text.appendChild(deleteChat);
+        chatBody.appendChild(text);
+        messageInput.value = '';
+    });
+}
+
+
